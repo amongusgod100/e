@@ -1,0 +1,105 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "very cool script hub",
+   LoadingTitle = "i love nuggets",
+   LoadingSubtitle = "by Darkness",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "script hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Key | Personal key(permanent)",
+      Subtitle = "Key System",
+      Note = "key will be given to whitelisted people",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"i love chicken nuggets123","buns"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("📜Main", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("scripts")
+
+Rayfield:Notify({
+   Title = "you are buns",
+   Content = "for some games",
+   Duration = 5,
+   Image = 13047715178,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "yea buddy",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Infinite yield",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+   end,
+})
+local Button = MainTab:CreateButton({
+   Name = "rivals",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/8bits4ya/rivals-v3/refs/heads/main/main.lua"))()
+   end,
+})
+local Button = MainTab:CreateButton({
+   Name = "gojo for tsb",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/BaldyToSorcerer/refs/heads/main/LatestV2.lua"))()
+   end,
+})
+local Button = MainTab:CreateButton({
+   Name = "jerk script",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))()
+   end,
+})
+local Button = MainTab:CreateButton({
+   Name = "blue lock rivals (key)",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Bhusant/Bathroom-attack/refs/heads/main/Bathroom"))()
+   end,
+})
+local Button = MainTab:CreateButton({
+   Name = "grab knife v4 (visual)",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Grab-knife-v4-24753"))()
+   end,
+})
+local MainTab = Window:CreateTab("others hub", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("more scripts")
+
+local Button = MainTab:CreateButton({
+   Name = "script hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/SCRIPTHUBV3/main/SCRIPTHUBV3"))()
+   end,
+})
+local Button = MainTab:CreateButton({
+   Name = "debuggers",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/debugnation/main/decompilers%20and%20debugging/Debuggers.txt"))()
+   end,
+})
+local MainTab = Window:CreateTab("for copy", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("scripts")
+
+local Paragraph = MainTab:CreateParagraph({Title = "Infinite Yield", Content = "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"})
+local Paragraph = MainTab:CreateParagraph({Title = "Rivals", Content = "https://raw.githubusercontent.com/8bits4ya/rivals-v3/refs/heads/main/main.lua"})
+local Paragraph = MainTab:CreateParagraph({Title = "Blue lock rivals", Content = "https://raw.githubusercontent.com/Bhusant/Bathroom-attack/refs/heads/main/Bathroom"})
+local Label = MainTab:CreateLabel("im lazy to add alot sorry!!!", "cat")
+
